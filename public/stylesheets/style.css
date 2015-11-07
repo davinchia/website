@@ -1,0 +1,94 @@
+/*GLOBAL*/
+a {
+	/*text-decoration: none;*/
+	color: white;
+}
+
+/*FOLLOWING REFER TO ALL THE CLASSES*/
+.img-circle {
+	border-radius: 50%;
+}
+
+/*Specifically for Logos*/
+.logo {
+	margin-top: 2%;
+}
+
+/*
+FOLLOWING REFER TO ALL THE IDS
+*/
+#canvas {
+	position: absolute;
+}
+
+/*contains all the content on page; centers it on screen*/
+#container {
+	height: auto;
+	width: 80%;
+	margin: auto;
+	margin-top: 2%;
+}
+
+/*#bio contains all the actual content of the page*/
+#bio {
+	position: absolute;
+	color: white;
+	font-size: 20px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+    margin: auto;
+    font-family: Calibri, Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+
+/*Following are members of the bio class; from left to right*/
+#profile-picture {
+	max-height: 20%;
+	max-width: 20%;
+	margin-left: 15%;
+	display: inline-block;
+	vertical-align: middle;
+	
+}
+
+/*div to divide photo and content*/
+#divide {
+	width: 5%;
+	display: inline-block;
+}
+
+/*contains personal writeup*/
+#write-up {
+	display: inline-block;
+	width: 45%;
+	vertical-align: middle;
+}
+
+/*FOLLOWING ARE ALL THE LINKS + LOGOS*/
+#links img{
+	width: 100px;
+	height: auto;
+}
+
+#resume-logo {
+	margin-right: 5%;
+	margin-left: 22%;
+}
+
+#github-logo {
+	margin-right: 5%;	
+}
+
+#linkedin-logo {
+	margin-right: 5%;
+}
+
+#contact-logo {
+	margin-right: 5%;
+}
