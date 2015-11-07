@@ -15,6 +15,8 @@ bio.style.height = canvas.height*0.8 + "px";
 var speedLimit = 5;
 var numParticles = 10;
 var radius = 10;
+var distanceApart = 200;
+var lineThickness = 1;
 //green, pink, yellow, red, dark green, turquiose
 var colors = ["#408000", "#FF8080", "#FFFF40", "#FF0000", "#408000", "#00C0C0"];
 
@@ -83,7 +85,7 @@ function drawLines() {
       if (i == j) {
         continue; //skip the same particle
       }
-      else {
+      else if (Math.sqrt(Math.pow(particles[i].x - particles[j].x, 2) + Math.pow(particles[i].y - particles[j].y , 2)) <= distanceApart){
         var gradient = context.createLinearGradient(particles[i].x, particles[i].y, particles[j].x, particles[j].y);
         gradient.addColorStop("0", particles[i].color);
         if (particles[j].color == undefined) {
@@ -96,7 +98,7 @@ function drawLines() {
         context.lineTo(particles[j].x, particles[j].y);
         
         context.strokeStyle = gradient;
-        context.lineWidth = 0.2;
+        context.lineWidth = lineThickness;
         context.stroke();
         
       }
