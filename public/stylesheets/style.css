@@ -26,7 +26,6 @@ FOLLOWING REFER TO ALL THE IDS
 	height: auto;
 	width: 80%;
 	margin: auto;
-	margin-top: 2%;
 }
 
 /*#bio contains all the actual content of the page*/
@@ -78,7 +77,7 @@ FOLLOWING REFER TO ALL THE IDS
 
 #resume-logo {
 	margin-right: 5%;
-	margin-left: 22%;
+	margin-left: 25%;
 }
 
 #github-logo {
