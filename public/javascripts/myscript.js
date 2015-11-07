@@ -13,8 +13,8 @@ bio.style.height = canvas.height*0.8 + "px";
 
 //global variables to set up the particles
 var speedLimit = 5;
-var numParticles = 10;
-var radius = 10;
+var numParticles = 13;
+var radius = 12;
 var distanceApart = 200;
 var lineThickness = 1;
 //green, pink, yellow, red, dark green, turquiose
@@ -126,6 +126,20 @@ function drawFunParticles() {
     particles[i].y += particles[i].fastSpeedY;
     
     //delete if the particle is outside the area
+    // if (particles[i].x < 0 || particles[i].x > canvas.height || particles[i].y < 0 || particles[i].y > canvas.width) {
+    //   if (particles[i].x < 0) {
+    //     particles[i].x = canvas.width;  
+    //   }
+    //   if (particles[i].x > canvas.width) {
+    //     particles[i].x = 0;  
+    //   }   
+    //   if (particles[i].y < 0) {
+    //     particles[i].y = canvas.height;  
+    //   }   
+    //   if (particles[i].y > canvas.height) {
+    //     particles[i].y = 0;  
+    //   }      
+    // }
     if (particles[i].x < 0 || particles[i].x > canvas.height || particles[i].y < 0 || particles[i].y > canvas.width) {
       if (particles[i].x < 0) {
         particles[i].x = canvas.width;  
