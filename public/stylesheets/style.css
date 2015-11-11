@@ -1,4 +1,9 @@
 /*GLOBAL*/
+html, body {
+	/*background-color: black;*/
+	/*margin: 0px;*/
+}
+
 a {
 	/*text-decoration: none;*/
 	color: white;
@@ -19,15 +24,6 @@ FOLLOWING REFER TO ALL THE IDS
 */
 #canvas {
 	position: absolute;
-}
-
-#icon {
-	width: 30px;
-	height: auto;
-	position: fixed;
-	top: 10px;
-	left: 20px;
-	/*z-index: 1000;*/
 }
 
 /*contains all the content on page; centers it on screen*/

@@ -1,8 +1,8 @@
 //set up the canvas
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = document.body.scrollWidth;
+canvas.height = document.body.scrollHeight;
 context.fillRect(0, 0, canvas.width, canvas.height);
 
 //set up bio box
@@ -241,7 +241,7 @@ window.onload = function(){
 
 //make sure everything scales
 window.onresize = function() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  canvas.width = document.body.scrollWidth;
+  canvas.height = document.body.scrollHeight;
   context.fillRect(0, 0, canvas.width, canvas.height);
 };
