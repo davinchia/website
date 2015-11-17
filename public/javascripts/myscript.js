@@ -12,9 +12,9 @@ bio.style.height = canvas.height*0.8 + "px";
 
 
 //global variables to set up the particles
-var speedLimit = 5;
+var speedLimit = 2;
 var numParticles = 13;
-var radius = 12;
+var radius = 5;
 var distanceApart = 200;
 var lineThickness = 1;
 //green, pink, yellow, red, dark green, turquiose
@@ -34,8 +34,8 @@ function newParticle(width, height) {
   var curr = [];
   curr.x = Math.floor(Math.random()*(height));
   curr.y = Math.floor(Math.random()*(width));
-  var speedX = Math.random()*(speedLimit) + 1 - speedLimit/2;
-  var speedY = Math.random()*(speedLimit) + 1 - speedLimit/2;
+  var speedX = Math.random()*speedLimit - speedLimit/2;
+  var speedY = Math.random()*speedLimit - speedLimit/2;
   curr.speedX = speedX;
   curr.speedY = speedY;
   curr.fastSpeedX = speedX * 8;
@@ -215,16 +215,40 @@ var currInterval = function() {
 
   properties.setInterval = function(callback) {
     if (currInterval == undefined) {
-      currInterval = setInterval(callback, 30);
+      currInterval = setInterval(callback, 15);
     }
     else {
       window.clearInterval(currInterval);
-      currInterval = setInterval(callback, 30); 
+      currInterval = setInterval(callback, 15); 
     }
   }
   return properties;
 }();
 
+//toggles the different images for the links
+var revealBright = function(e) {
+  var bright = document.getElementById(this.id + "-logo-bright");
+  var grey = document.getElementById(this.id + "-logo-grey");
+
+  var indexBright = bright.className.indexOf("hide");
+ 
+  bright.className = bright.className.substring(0, indexBright-1);
+  grey.className += " hide";
+ 
+
+}
+
+var hideBright = function(e) {
+  var bright = document.getElementById(this.id + "-logo-bright");
+  var grey = document.getElementById(this.id + "-logo-grey");
+
+  var indexGrey = grey.className.indexOf("hide");
+
+  grey.className = grey.className.substring(0, indexGrey-1);
+  bright.className += " hide";
+
+
+}
 
 //only load after the window has loaded
 window.onload = function(){
@@ -237,6 +261,31 @@ window.onload = function(){
   var fun = document.getElementById("fun");
   fun.addEventListener("mouseover", haveFun);
   fun.addEventListener("mouseout", stopFun);
+
+  //event handler for the links
+  var resume = document.getElementById("resume");
+  var resumeRevealBright = revealBright.bind(resume);
+  resume.addEventListener("mouseover", resumeRevealBright);
+  var resumeHideBright = hideBright.bind(resume);
+  resume.addEventListener("mouseout", resumeHideBright);
+
+  var github = document.getElementById("github");
+  var githubRevealBright = revealBright.bind(github);
+  github.addEventListener("mouseover", githubRevealBright);
+  var githubHideBright = hideBright.bind(github);
+  github.addEventListener("mouseout", githubHideBright);
+
+  var linkedin = document.getElementById("linkedin");
+  var linkedinRevealBright = revealBright.bind(linkedin);
+  linkedin.addEventListener("mouseover", linkedinRevealBright);
+  var linkedinHideBright = hideBright.bind(linkedin);
+  linkedin.addEventListener("mouseout", linkedinHideBright);
+
+  var contact = document.getElementById("contact");
+  var contactRevealBright = revealBright.bind(contact);
+  contact.addEventListener("mouseover", contactRevealBright);
+  var contactHideBright = hideBright.bind(contact);
+  contact.addEventListener("mouseout", contactHideBright);
 };
 
 //make sure everything scales

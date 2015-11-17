@@ -19,6 +19,10 @@ a {
 	margin-top: 2%;
 }
 
+.hide {
+	display: none;
+}
+
 /*
 FOLLOWING REFER TO ALL THE IDS
 */
@@ -80,19 +84,56 @@ FOLLOWING REFER TO ALL THE IDS
 	height: auto;
 }
 
-#resume-logo {
+#resume {
+	text-decoration: none;
+}
+
+#resume-logo-grey {
+	margin-right: 5%;
+	margin-left: 25%;
+	opacity: 0.4;
+}
+
+#resume-logo-bright {
 	margin-right: 5%;
 	margin-left: 25%;
 }
 
-#github-logo {
+#github {
+	text-decoration: none;
+}
+
+#github-logo-grey {
+	margin-right: 5%;	
+	opacity: 0.4;
+}
+
+#github-logo-bright {
 	margin-right: 5%;	
 }
 
-#linkedin-logo {
+#linkedin {
+	text-decoration: none;
+}
+
+#linkedin-logo-grey {
+	margin-right: 5%;
+	opacity: 0.4;
+}
+
+#linkedin-logo-bright {
 	margin-right: 5%;
 }
 
-#contact-logo {
+#contact {
+	text-decoration: none;
+}
+
+#contact-logo-grey {
+	margin-right: 5%;
+	opacity: 0.4;
+}
+
+#contact-logo-bright {
 	margin-right: 5%;
 }
